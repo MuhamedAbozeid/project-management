@@ -1,19 +1,25 @@
 .project-filter {
     margin: 30px auto;
+    margin-bottom: 0;
   }
   .project-filter nav {
     display: flex;
     padding: 10px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
   .project-filter p {
     font-size: 0.9em;
     margin-right: 10px;
   }
   .project-filter button {
-    background: transparent;
+    background: #fff;
     border: 0;
+    border-radius: 20px;
+    padding: .5em 2em;
     font-family: inherit;
     font-weight: bold;
     color: var(--text-color);
@@ -25,5 +31,23 @@
     border: 0;
   }
   .project-filter button.active {
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color:white;
   } 
+
+
+  /* MEDIA QUERY */
+
+@media screen and (max-width: 1500px) {
+  .project-filter button {
+      padding: 0.5em 1em;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .project-filter button {
+      font-size: 0.7em;
+  }
+  
+}

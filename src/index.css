@@ -9,6 +9,7 @@
   --bg-color: #f4f4f4;
 }
 
+
 /* base styles */
 body {
   font-family: Poppins, sans-serif;
@@ -16,6 +17,7 @@ body {
   font-size: 1.1em;
   background: var(--bg-color);
 }
+
 ul, li, p, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;

@@ -14,7 +14,7 @@ const handleClick = (newFilter) => {
   return (
     <div className="project-filter">
       <nav>
-        <p>Filter by: </p>
+        {/* <p>Filter by: </p> */}
         {filterList.map((f) => (
           <button key={f}
             onClick={() => handleClick(f)}

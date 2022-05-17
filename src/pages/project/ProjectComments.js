@@ -37,15 +37,18 @@ const handleSubmit = async (e) => {
     <div className="project-comments">
       <h4>Project Comments</h4>
 
-      <ul>
+      <ul className='comments'>
         {project.comments.length > 0 && project.comments.map(comment => (
           <li key={comment.id}>
-            <div className="comment-author">
-              <Avatar src={comment.photoURL} />
-              <p>{comment.displayName}</p>
-            </div>
-            <div className="comment-date">
-              <p>{formatDistanceToNow(comment.createdAt.toDate(), { addSuffix:true})}</p>
+
+            <div className='comment-top'>
+              <div className="comment-author">
+                <Avatar src={comment.photoURL} />
+                <p>{comment.displayName}</p>
+              </div>
+              <div className="comment-date">
+                <p>{formatDistanceToNow(comment.createdAt.toDate(), { addSuffix:true})}</p>
+              </div>
             </div>
             <div className="comment-content">
               <p>{comment.content}</p>

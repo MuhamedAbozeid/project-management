@@ -50,6 +50,7 @@ export default function Dashboard() {
       {documents && (
       <ProjectFilter currentFilter = {currentFilter} changeFilter={changeFilter} />
       )}
+        <hr></hr>
       {projects && <ProjectList projects={projects} />}
     </div>
   )

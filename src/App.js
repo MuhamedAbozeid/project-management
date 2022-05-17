@@ -18,6 +18,7 @@ import OnlineUsers from './components/OnlineUsers';
 
 function App() {
 
+  
   const {user, authIsReady} = useAuthContext()
 
   return (

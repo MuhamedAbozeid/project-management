@@ -3,6 +3,7 @@ import Avatar from './Avatar';
 
 //styles
 import './ProjectList.css'
+import Arrow from '../assets/arrow_right.svg'
 
 
 
@@ -11,7 +12,7 @@ export default function ProjectList({projects}) {
     <div className="project-list">
       {projects.length === 0 && <p>No projects yet!</p>}
       {projects.map(project => (
-        <Link to={`/projects/${project.id}`} key={project.id}>
+        <div className='projects-container' key={project.name}>
           <h4>{project.name}</h4>
           <p>Due by {project.dueDate.toDate().toDateString()}</p>
           <div className="assigned-to">
@@ -24,7 +25,17 @@ export default function ProjectList({projects}) {
               ))}
             </ul>
           </div>
-        </Link>
+          <div className='details-container'>
+          <Link to={`/projects/${project.id}`} key={project.id}>
+            <button>
+                <span>
+                  View Details 
+                  <img   src={Arrow} alt="arrow-right" className='arrow-right'/>
+                </span>
+            </button>
+          </Link>
+          </div>
+        </div>
       ))}
     </div>
   )
